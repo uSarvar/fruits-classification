@@ -1,2 +1,2 @@
 # fruits-classification
-Fruits classification
+Fruits(strawberry, lemon, grape, banana and apple) classification model.
