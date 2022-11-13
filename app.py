@@ -19,11 +19,11 @@ pic = st.camera_input('Take a picture')
 model = load_learner('fruit_model1.pkl')
 if file:
    # PIL convert
-   img = PILImage.create(file)
-   pred, pred_id, probs = model.predict(img)
+   img1 = PILImage.create(file)
+   pred, pred_id, probs = model.predict(img1)
 else:
-   img = PILImage.create(pic)
-   pred, pred_id, probs = model.predict(img)
+   img2 = PILImage.create(pic)
+   pred, pred_id, probs = model.predict(img2)
 
 # plotting
 fig = px.bar(x=probs*100, y=model.dls.vocab)
