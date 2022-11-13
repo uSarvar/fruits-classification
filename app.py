@@ -9,7 +9,8 @@ if plt == 'Linux' : pathlib.WindowsPath = pathlib.PosixPath
 
 # title
 st.title('Classification of fruits')
-st.subheader('This app predicts which of the classes (strawberry, lemon, grape, banana and apple) an image uploaded to the app belongs to. You can upload an image or take a pic from your device.')
+st.subheader('This app predicts which of the classes (strawberry, lemon, grape, banana and apple)\
+an image uploaded to the app belongs to. You can upload an image or take a pic from your device.')
 
 # upload pics
 file = st.file_uploader('Upload image', type=['png','jpeg','jpg','gif','svg'])
@@ -32,6 +33,3 @@ st.plotly_chart(fig)
 st.success(f'Prediction: {pred}')
 st.info(f'Probability: {probs[pred_id]*100:.2f}%')
 st.image(file)
-
-
-   
