@@ -11,7 +11,7 @@ if plt == 'Linux' : pathlib.WindowsPath = pathlib.PosixPath
 st.title('Classification of fruits')
 st.subheader('This app predicts which of the classes (strawberry, lemon, grape, banana and apple)\
  an image uploaded to the app belongs to. You can upload an image from your device.')
-st.get_option('key')
+
 # upload pics
 file = st.file_uploader('Upload image', type=['png','jpeg','jpg','gif','svg'])
 
@@ -31,3 +31,5 @@ if file:
    st.success(f'Prediction: {pred}')
    st.info(f'Probability: {probs[pred_id]*100:.2f}%')
    st.image(file)
+   
+st.balloons('congratulations!')
