@@ -14,10 +14,8 @@ st.subheader('This app predicts which of the classes (strawberry, lemon, grape, 
 
 # upload pics
 file = st.file_uploader('Upload image', type=['png','jpeg','jpg','gif','svg'])
-
 pic = st.camera_input('Take a picture')
-# model
-model = load_learner('fruit_model1.pkl')
+
 if file:
    # PIL convert
    img1 = PILImage.create(file)
@@ -25,6 +23,9 @@ if file:
 else:
    img2 = PILImage.create(pic)
    pred, pred_id, probs = model.predict(img2)
+
+# model
+model = load_learner('fruit_model1.pkl')
 
 # plotting
 fig = px.bar(x=probs*100, y=model.dls.vocab)
