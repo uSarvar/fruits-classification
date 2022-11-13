@@ -24,11 +24,11 @@ if file:
    img1 = PILImage.create(file)
    pred, pred_id, probs = model.predict(img1)
 
-# plotting
-fig = px.bar(x=probs*100, y=model.dls.vocab)
-st.plotly_chart(fig)
+   # plotting
+   fig = px.bar(x=probs*100, y=model.dls.vocab)
+   st.plotly_chart(fig)
 
-# prediction
-st.success(f'Prediction: {pred}')
-st.info(f'Probability: {probs[pred_id]*100:.2f}%')
-st.image(file)
+   # prediction
+   st.success(f'Prediction: {pred}')
+   st.info(f'Probability: {probs[pred_id]*100:.2f}%')
+   st.image(file)
