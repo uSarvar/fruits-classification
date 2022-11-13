@@ -32,4 +32,4 @@ if file:
    st.info(f'Probability: {probs[pred_id]*100:.2f}%')
    st.image(file)
    
-st.balloons()
+   st.balloons()
