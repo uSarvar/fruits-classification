@@ -10,7 +10,7 @@ if plt == 'Linux' : pathlib.WindowsPath = pathlib.PosixPath
 # title
 st.title('Classification of fruits')
 st.subheader('This app predicts which of the classes (strawberry, lemon, grape, banana and apple)\
-an image uploaded to the app belongs to. You can upload an image or take a pic from your device.')
+ an image uploaded to the app belongs to. You can upload an image or take a pic from your device.')
 
 # upload pics
 file = st.file_uploader('Upload image', type=['png','jpeg','jpg','gif','svg'])
