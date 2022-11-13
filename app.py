@@ -23,9 +23,6 @@ if file:
    # PIL convert
    img1 = PILImage.create(file)
    pred, pred_id, probs = model.predict(img1)
-else:
-   img2 = PILImage.create(pic)
-   pred, pred_id, probs = model.predict(img2)
 
 # plotting
 fig = px.bar(x=probs*100, y=model.dls.vocab)
