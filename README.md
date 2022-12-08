@@ -1,2 +1,2 @@
 # fruits-classification
-Classification of fruits
+Classification of fruits.
